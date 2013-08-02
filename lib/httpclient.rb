@@ -660,9 +660,9 @@ class HTTPClient
       warn("could be a relative URI in location header which is not recommended")
       warn("'The field value consists of a single absolute URI' in HTTP spec")
     end
-    if https?(uri) && !https?(newuri)
-      raise BadResponseError.new("redirecting to non-https resource")
-    end
+    #if https?(uri) && !https?(newuri)
+    #  raise BadResponseError.new("redirecting to non-https resource")
+    #end
     puts "redirect to: #{newuri}" if $DEBUG
     newuri
   end
